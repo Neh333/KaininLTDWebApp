@@ -25,9 +25,17 @@ body {
     border-color: #6B492B !important;
 }
 
+.container-fluid {
+    overflow-x: hidden;
+    padding: 0 !important;
+    margin: 0 !important;
+}
+
+
 .card {
     top: 50%;
     width: fit-content;
+    padding: 0;
     box-shadow: 0 0 5px 0;
     background: inherit;
     backdrop-filter: blur(10px);
