@@ -1,0 +1,23 @@
+name: dotnet package
+
+on:
+  push:
+    branches:
+    - main
+  pull_request:
+    branches:
+    - main
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.x'
+      # You can test your matrix by printing the current dotnet version
+      - name: Build dotnet project
+        run: dotnet build 
