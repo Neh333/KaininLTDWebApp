@@ -1,3 +1,17 @@
+using ShopifySharp;
+using ShopifySharp.Extensions.DependencyInjection;
+//public class DependencyInjectionExample(IServiceCollection services)
+//{
+//    // ...
+
+//    // Add ShopifySharp's service factories and the LeakyBucketExecutionPolicy to your DI container
+//    services.AddShopifySharp<LeakyBucketExecutionPolicy>(options =>
+//    {
+//        options.RequestExecutionPolicy = new LeakyBucketExecutionPolicy();
+//    });
+//}
+
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.

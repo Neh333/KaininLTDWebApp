@@ -16,36 +16,71 @@
 	</div>
 </section>
 
-<section id="FeaturedVideo">
-	<div class="container-fluid vh-100" style="width:100%" id="FeaturedVideo">
-		<video muted autoplay loop>
-			<source src="movie.mp4" type="video/mp4">
-		</video>
-	</div>
-</section>
 
-<section id="EvoCondominium">
-	<div class="card mx-auto" style="width: 350px">
-		<img class="card-img" src="~/images/EvoConn.jpg" alt="Card image">
-		<div class="card-img-overlay">
-			<div class="card-body"> The Evolution Condominium  </div>
+<div id="HomeCarousel" class="carousel slide container-fluid text-center vh-100" data-bs-ride="carousel">
+	<div class="carousel-indicators">
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+		<button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+	</div>
+	<div class="carousel-inner">
+		<div class="carousel-item active">
+			<img src="images/ChillKainin.png" class="featured-img mx-auto my-auto pt-5" />
+		</div>
+		<div class="carousel-item">
+			<img src="images/InfoI.png" class="featured-img mx-auto my-auto pt-5" />
+		</div>
+		<div class="carousel-item">
+			<img src="..." class="d-block w-100" alt="...">
 		</div>
 	</div>
-</section>
+	<button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+		<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Previous</span>
+	</button>
+	<button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+		<span class="carousel-control-next-icon" aria-hidden="true"></span>
+		<span class="visually-hidden">Next</span>
+	</button>
+</div>
+
+@*add features media section admin UI to change between videos and pictures possibly?*@
+@* <section id="FeaturedVideo"> *@
+@* 	<div class="container-fluid vh-100" style="width:100%" id="FeaturedVideo"> *@
+@* 		<video muted autoplay loop> *@
+@* 			<source src="movie.mp4" type="video/mp4"> *@
+@* 		</video> *@
+@* 	</div> *@
+@* </section> *@
+
+@* <section id="EvoArchive"> *@
+@* 	<div class="container card mx-auto" style="width: 350px"> *@
+@* 		<img class="card-img" src="~/images/EvoConn.jpg" alt="Card image"> *@
+@* 		<div class="card-img-overlay"> *@
+@* 			<div class="card-body"> The Evolution Archive  </div> *@
+@* 		</div> *@
+@* 	</div> *@
+@* </section> *@
 
 
 <script>
-    window.sr = ScrollReveal();
 
-	sr.reveal('.navbar', {
-		duration: 2000,
-		origin: 'bottom'
-	});
-
-	sr.reveal('div#FeaturedVideo', {
-		duration: 2000,
+	var slideUp = {
 		origin: 'bottom',
-		distance: '300px',
-		viewFactor: 0.2
-	})
+		duration: 2000,
+		distance: '100px',
+		opacity: null
+	};
+
+	var revealUp = {
+	   	origin: 'bottom',
+		duration: 2000,
+	   	distance: '300px',
+		opacity: null,
+	    viewFactor: 0.2
+	};
+
+	ScrollReveal().reveal('.navbar', slideUp);
+	ScrollReveal.reveal('.div#FeaturedImage', revealUp);
+	
 </script>
